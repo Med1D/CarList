@@ -11,15 +11,15 @@ import Foundation
 import CoreData
 
 @objc(Car)
-public class Car: NSManagedObject {
+public class Car: NSManagedObject
+{
 
-    func convertDateIntoString() -> String? {
-        guard let year = yearOfManufacture else { return nil }
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM-dd-yyyy"
-        let result = dateFormatter.string(from: year as Date)
-        return result
-    }
-    
+	func convertDateIntoString() -> String? {
+		guard let year = yearOfManufacture else { return nil }
+
+		let dateFormatter = DateFormatter()
+		dateFormatter.dateFormat = "MM-dd-yyyy"
+		let result = dateFormatter.string(from: year as Date)
+		return result
+	}
 }

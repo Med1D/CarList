@@ -10,18 +10,17 @@
 import Foundation
 import CoreData
 
+extension Car
+{
 
-extension Car {
+	@nonobjc public class func fetchRequest() -> NSFetchRequest<Car> {
+		return NSFetchRequest<Car>(entityName: "Car")
+	}
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Car> {
-        return NSFetchRequest<Car>(entityName: "Car")
-    }
-
-    @NSManaged public var imageData: NSData?
-    @NSManaged public var model: String?
-    @NSManaged public var manufacturer: String?
-    @NSManaged public var bodyType: String?
-    @NSManaged public var yearOfManufacture: NSDate?
-    @NSManaged public var id: String?
-
+	@NSManaged public var imageData: NSData?
+	@NSManaged public var model: String?
+	@NSManaged public var manufacturer: String?
+	@NSManaged public var bodyType: String?
+	@NSManaged public var yearOfManufacture: NSDate?
+	@NSManaged public var id: String?
 }
